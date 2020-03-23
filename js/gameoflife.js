@@ -1,6 +1,6 @@
 // To return arguments as an Array
-function seed(params) {
-  return Array.prototype.slice.call(argunments)
+function seed() {
+  return Array.prototype.slice.call(arguments)
 }
 
 // compare value of 2 arrays, if same, return true, else false
@@ -39,7 +39,7 @@ const corners = (state = []) => {
 const printCells = state => {
   const { bottomLeft, topRight } = corners(state)
   let accumulator = ''
-  for (let y = topRight[1]; x <= bottomLeft[1]; y--) {
+  for (let y = topRight[1]; y >= bottomLeft[1]; y--) {
     let row = []
     for (let x = bottomLeft[0]; x <= topRight[0]; x++) {
       row.push(printCell([x, y], state))
