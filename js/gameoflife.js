@@ -1,40 +1,11 @@
 // To return arguments as an Array
 function seed(params) {
-  var args = new Array(arguments.length)
-  for (var i = 0; i < args.length; i++) {
-    args[i] = arguments[i]
-  }
-  return args
-  // https://stackoverflow.com/a/24011235/13107686
-
-  // return Array.prototype.slice.call(argunments)
+  return Array.prototype.slice.call(argunments)
 }
 
 // compare value of 2 arrays, if same, return true, else false
 function same([x, y], [j, k]) {
-  // Warn if overriding existing method
-  if (Array.prototype.equals) {
-    console.warn(
-      "Overriding existing Array.prototype.equals. Possible causes: New API defines the method, there's a framework conflict or you've got double inclusions in your code."
-    )
-  }
-
-  var array1 = []
-  var array2 = []
-
-  if (array1.length !== array2.length) {
-    return false
-  } else {
-    for (var i = 0; i < this.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false
-      } else {
-        return true
-      }
-    }
-  }
-
-  // return x === j && y === k
+  return x === j && y === k
 }
 
 // The game state to search for `cell` is passed as the `this` value of the function.
